@@ -6,3 +6,4 @@ aws ec2 describe-instances \ //to get instances PublicIpAddress
 
 
 aws ec2 describe-instances --instance-ids i-06981e3c5f141918d --query 'Reservations[*].Instances[*].PublicIpAddress' --output text >> inventory
+Token: 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 (Git)
