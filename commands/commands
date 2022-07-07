@@ -1,0 +1,8 @@
+aws ec2 describe-instances \ //to get instances PublicIpAddress
+\
+        --query 'Reservations[*].Instances[*].PublicIpAddress' \
+      --filters "Name=tag:Project,Values=udacity" \
+      --output text >> inventory
+
+
+aws ec2 describe-instances --instance-ids i-06981e3c5f141918d --query 'Reservations[*].Instances[*].PublicIpAddress' --output text >> inventory
